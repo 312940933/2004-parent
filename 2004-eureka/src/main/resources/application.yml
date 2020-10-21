@@ -1,0 +1,19 @@
+server:
+  port: 8000
+
+eureka:
+  client:
+
+    #标注当前工程是否注册到eureka
+    register-with-eureka: false
+    #标注当前工程是否从eureka获取注册信息
+    fetch-registry: false
+    #不走默认端口号
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+  server:
+    #关闭自我保护机制
+    enable-self-preservation: false
+spring:
+  application:
+    name: 2004-eureka
